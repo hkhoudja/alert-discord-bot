@@ -48,7 +48,7 @@ client.on('ready', () => {
 });
 
 client.on("guildMemberAdd", (member) => {
-    const memberRole = member.guild.roles.cache.find(role => role.name === 'member');
+    const memberRole = member.guild.roles.cache.find(role => role.name === 'Member');
     const channel = client.channels.cache.find(channel => channel.name === 'bot-testing');
     console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
     channel.send(`"${member.user.username}" has joined this server`);
